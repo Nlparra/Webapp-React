@@ -18,14 +18,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://swapi.co/api/people")
 					.then(res => res.json())
 					.then(data => {
-						console.log(data.results), setStore({ people: data });
+						console.log(data.results), setStore({ people: data.results });
 					});
 			},
 			getPlanets: () => {
 				fetch("https://swapi.co/api/planets")
 					.then(res => res.json())
-					.then(data => {
-						console.log(data.results), setStore({ planets: data });
+					.then(yellow => {
+						console.log(yellow.results), setStore({ planets: yellow });
 					});
 			},
 
