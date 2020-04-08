@@ -14,3 +14,15 @@ header {
 h1{
     color: white;
 }
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 100%;
+
+  .card {
+    display: inline-block;
+    height: 100%;
+  }
+}
