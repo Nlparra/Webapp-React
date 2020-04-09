@@ -3,8 +3,9 @@ import { People } from "./../component/People";
 import { Planet } from "./../component/Planet";
 import { Context } from "./../store/appContext";
 
-export const Pop = () => {
+export const Pop = props => {
 	const { store } = useContext(Context);
+	console.log(props);
 
 	return (
 		<div className="container">
