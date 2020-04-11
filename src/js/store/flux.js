@@ -15,18 +15,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 				*/
 			},
 			getPeople: () => {
-				fetch("https://swapi.co/api/people")
+				fetch(`https://gateway.marvel.com:443/v1/public/characters?apikey=${process.env.APIKEY}`)
 					.then(res => res.json())
 					.then(data => {
-						console.log(data.results), setStore({ people: data.results });
-					});
+						console.log("yolo", data.data.results), setStore({ people: data.data.results });
+					})
+					.catch(err => console.log(err));
 			},
 			getPlanets: () => {
-				fetch("https://swapi.co/api/planets")
+				fetch(`https://gateway.marvel.com:443/v1/public/comics?apikey=${process.env.APIKEY}`)
 					.then(res => res.json())
 					.then(data => {
-						console.log(data.results), setStore({ planet: data.results });
-					});
+						console.log(data.data.results), setStore({ planet: data.data.results });
+					})
+					.catch(err => console.log(err));
 			},
 
 			changeColor: (index, color) => {

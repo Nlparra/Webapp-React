@@ -10,18 +10,14 @@ export const People = () => {
 
 	return (
 		<>
-			<h1>Characters</h1>
 			{store.people &&
 				store.people.map((info, index) => {
 					return (
 						<div key={index} className="card" style={{ width: "18rem" }}>
 							<div className="card-body">
-								<Link to={`/pop/${info.name}`}>{info.name}</Link>
+								<Link to={`/character/${info.id}`}>{info.name}</Link>
 
-								<div className="card-text text-wrap">
-									Some quick example text to build on the card title and make up the bulk of the card
-									&#39;s
-								</div>
+								<div className="card-text text-truncate">{info.description}</div>
 							</div>
 						</div>
 					);

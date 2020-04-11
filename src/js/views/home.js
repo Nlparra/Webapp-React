@@ -8,9 +8,11 @@ export const Home = () => {
 
 	return (
 		<>
+			<h1>Characters</h1>
 			<div className="scrolling-wrapper">
 				<People />
 			</div>
+			<h1>Comics</h1>
 			<div className="scrolling-wrapper">
 				<Planet />
 			</div>

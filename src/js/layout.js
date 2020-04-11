@@ -22,7 +22,8 @@ export const Layout = () => {
 					<Navbar />
 					<Switch>
 						<Route exact path="/" component={Home} />
-						<Route path="/Pop" component={Pop} />
+						<Route path="/character/:id" component={Pop} />
+						<Route path="/comics/:id" component={Pop} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />

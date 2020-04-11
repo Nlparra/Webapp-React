@@ -8,13 +8,12 @@ export const Planet = () => {
 
 	return (
 		<>
-			<h1>Planets</h1>
 			{store.planet &&
 				store.planet.map((info, index) => {
 					return (
 						<div key={index} className="card" style={{ width: "18rem", height: "300px" }}>
 							<div className="card-body">
-								<Link to={`/pop/${info.name}`}>{info.name}</Link>
+								<Link to={`/pop/${info.title}`}>{info.title}</Link>
 								<div className="card-text text-wrap">
 									Some quick example text to build on the card title and make up the bulk of the card
 									&#39;s
