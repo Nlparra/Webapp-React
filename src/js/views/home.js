@@ -12,8 +12,8 @@ export const Home = () => {
 			<div className="scrolling-wrapper">
 				<People />
 			</div>
-			<h1>Comics</h1>
-			<div className="scrolling-wrapper">
+			<h1 className="mt-5">Comics</h1>
+			<div className="scrolling-wrapper-comics">
 				<Planet />
 			</div>
 		</>

@@ -15,9 +15,12 @@ export const People = () => {
 					return (
 						<div key={index} className="card" style={{ width: "18rem" }}>
 							<div className="card-body">
+								<img
+									className="card-img-top"
+									src={`${info.thumbnail.path}.${info.thumbnail.extension}`}
+									alt="Card image cap"
+								/>
 								<Link to={`/character/${info.id}`}>{info.name}</Link>
-
-								<div className="card-text text-truncate">{info.description}</div>
 							</div>
 						</div>
 					);

@@ -13,11 +13,12 @@ export const Planet = () => {
 					return (
 						<div key={index} className="card" style={{ width: "18rem", height: "300px" }}>
 							<div className="card-body">
+								<img
+									className="card-img-top"
+									src={`${info.thumbnail.path}.${info.thumbnail.extension}`}
+									alt="Card image cap"
+								/>
 								<Link to={`/pop/${info.title}`}>{info.title}</Link>
-								<div className="card-text text-wrap">
-									Some quick example text to build on the card title and make up the bulk of the card
-									&#39;s
-								</div>
 							</div>
 						</div>
 					);
