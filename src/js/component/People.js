@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export const People = () => {
 	const { store } = useContext(Context);
-	console.log("people", store.people);
+	// console.log("people", store.people);
 
 	return (
 		<>

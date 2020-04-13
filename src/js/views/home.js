@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { People } from "./../component/People";
-import { Planet } from "./../component/Planet";
+import { Comic } from "../component/Comic";
 import { Context } from "./../store/appContext";
 
 export const Home = () => {
@@ -14,7 +14,7 @@ export const Home = () => {
 			</div>
 			<h1 className="mt-5">Comics</h1>
 			<div className="scrolling-wrapper-comics">
-				<Planet />
+				<Comic />
 			</div>
 		</>
 	);

@@ -4,6 +4,7 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
 import { Pop } from "./views/Pop";
+import { Adventure } from "./views//Adventure";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -23,7 +24,7 @@ export const Layout = () => {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/character/:id" component={Pop} />
-						<Route path="/comics/:id" component={Pop} />
+						<Route path="/adventure/:id" component={Adventure} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />

@@ -2,7 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			people: [],
-			planet: []
+			comic: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -18,15 +18,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch(`https://gateway.marvel.com:443/v1/public/characters?apikey=${process.env.APIKEY}`)
 					.then(res => res.json())
 					.then(data => {
-						console.log("yolo", data.data.results), setStore({ people: data.data.results });
+						// console.log("yolo", data.data.results),
+						setStore({ people: data.data.results });
 					})
 					.catch(err => console.log(err));
 			},
-			getPlanets: () => {
+			getComic: () => {
 				fetch(`https://gateway.marvel.com:443/v1/public/comics?apikey=${process.env.APIKEY}`)
 					.then(res => res.json())
 					.then(data => {
-						console.log(data.data.results), setStore({ planet: data.data.results });
+						// console.log(data.data.results),
+						setStore({ comic: data.data.results });
 					})
 					.catch(err => console.log(err));
 			},
